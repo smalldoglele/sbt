@@ -1,0 +1,26 @@
+#Tomcat
+server:
+  tomcat:
+    uri-encoding: utf-8
+    max-threads: 1000
+    min-spare-threads: 30
+  port: 8080
+# mysql
+spring:
+  profiles:
+    active: dev
+  dataSources:
+      type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.jdbc.Driver
+  http:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+  resources:
+    static-locations: classpath:/static/,classpath:/views/
+
+#mybatis 配置
+mybatis:
+  mapper-locations: classpath:com/unionx/sbt/dao/*.xml
+  config-location: classpath:mybatis.xml
