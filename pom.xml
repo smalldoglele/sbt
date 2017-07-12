@@ -88,8 +88,8 @@
         <!--通用mapper-->
         <dependency>
             <groupId>tk.mybatis</groupId>
-            <artifactId>mapper</artifactId>
-            <version>${mapper.version}</version>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>1.1.1</version>
         </dependency>
     </dependencies>
 
@@ -97,6 +97,9 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>generator/</exclude>
+                </excludes>
             </resource>
             <resource>
                 <directory>src/main/java</directory>

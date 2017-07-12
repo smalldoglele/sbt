@@ -1,11 +1,13 @@
 package com.unionx.sbt;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
+@MapperScan(basePackages = "com.unionx.sbt.mapper")
 public class SbtApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
